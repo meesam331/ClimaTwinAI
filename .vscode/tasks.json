@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run ClimaTwin Flask API",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"run_local.py"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run ClimaTwin Vite frontend",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"dev"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
