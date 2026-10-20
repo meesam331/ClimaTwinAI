@@ -36,7 +36,7 @@ Open http://127.0.0.1:5173. Vite reads `FLASK_PORT` from `.env` and proxies anal
 
 ## Deploy to Vercel
 
-Import the repository into Vercel, add `GROQ_API_KEY` to the project environment variables, and deploy. `vercel.json` routes `/api/*` to `api/index.py` and serves the Vite production build from `dist`.
+Import the repository into Vercel, add `GROQ_API_KEY` to the project environment variables, and deploy. `vercel.json` routes `/api/*` to `api/index.py` using Python 3.12 with a 60-second function limit, and serves the Vite production build from `dist`. Confirm `/api/health` returns `{"status":"ok"}` to check that the deployed API is reachable.
 
 ## Data and limitations
 
