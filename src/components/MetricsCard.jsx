@@ -3,9 +3,9 @@ import { Bar, BarChart, ResponsiveContainer } from 'recharts';
 import { Droplets, Factory, Sun } from 'lucide-react';
 
 const metrics = [
-  { key: 'carbon_kg_per_year', label: 'Annual carbon', unit: 'kg CO₂ / yr', icon: Factory, color: '#ff8c72', chart: '#ff795f' },
-  { key: 'solar_kw', label: 'Solar potential', unit: 'kW capacity', icon: Sun, color: '#f4ce75', chart: '#e5b94b' },
-  { key: 'water_litres', label: 'Rain capture', unit: 'litres / yr', icon: Droplets, color: '#83d5e6', chart: '#58bad1' },
+  { key: 'carbon_kg_per_year', label: 'Annual carbon', unit: 'kg CO₂ / yr', icon: Factory, color: '#bd7257', chart: '#d69472' },
+  { key: 'solar_kw', label: 'Solar potential', unit: 'kW capacity', icon: Sun, color: '#ad7a2f', chart: '#d1a654' },
+  { key: 'water_litres', label: 'Rain capture', unit: 'litres / yr', icon: Droplets, color: '#4e8790', chart: '#78aeb0' },
 ];
 
 export default function MetricsCard({ analysis }) {

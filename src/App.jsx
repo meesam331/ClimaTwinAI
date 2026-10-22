@@ -33,21 +33,6 @@ const pakistanCities = [
   'Gwadar', 'Turbat', 'Thatta', 'Jhelum', 'Wah Cantt', 'Taxila', 'Chitral',
 ];
 
-function TypewriterHeadline() {
-  const phrase = 'Build Today, Survive 2050';
-  const [text, setText] = useState('');
-  useEffect(() => {
-    let index = 0;
-    const timer = window.setInterval(() => {
-      index += 1;
-      setText(phrase.slice(0, index));
-      if (index >= phrase.length) window.clearInterval(timer);
-    }, 62);
-    return () => window.clearInterval(timer);
-  }, []);
-  return <>{text}<span className="type-caret" aria-hidden="true" /></>;
-}
-
 function LoadingOverlay() {
   const messages = ['Reading the local climate signal', 'Pairing NASA Earth observations', 'Modeling your building twin'];
   const [step, setStep] = useState(0);
@@ -187,8 +172,8 @@ export default function App() {
         <section className="hero-section">
           <div className="hero-copy">
             <motion.div className="eyebrow-pill" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}><span className="pulse-dot" /> PAKISTAN’S BUILDING CLIMATE TWIN</motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, delay: 0.12 }}><TypewriterHeadline /></motion.h1>
-            <motion.p className="hero-description" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, delay: 0.35 }}>A clearer picture of your building’s climate future. Turn real Earth observations and your design choices into a practical resilience plan.</motion.p>
+            <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, delay: 0.12 }}>Ready for<br />what’s next.</motion.h1>
+            <motion.p className="hero-description" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, delay: 0.35 }}>See how local climate and your building choices shape a more resilient future.</motion.p>
             <motion.div className="hero-actions" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, delay: 0.48 }}><a className="button-primary" href="#analyze">Build your twin <ArrowRight size={17} /></a><span className="keyless-note"><ShieldCheck size={16} /> No account · no weather API key</span></motion.div>
             <motion.div className="hero-trust" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.75 }}><span><CloudSun size={15} /> Live local conditions</span><i /><span><Zap size={15} /> NASA POWER data</span><i /><span><MapPin size={15} /> Built for Pakistan</span></motion.div>
           </div>
@@ -214,7 +199,7 @@ export default function App() {
         <section className="analyzer-section" id="analyze">
           <div className="section-intro">
             <div><span className="section-kicker">YOUR BUILDING, REIMAGINED</span><h2>Start with the structure.<br /><em>See the climate story.</em></h2></div>
-            <p>Share a few project details. Your twin combines them with local weather and NASA climate signals to surface your next best move.</p>
+            <p>A few building details are all it takes to get started.</p>
           </div>
           <motion.form className="input-panel" onSubmit={runAnalysis} initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.18 }} whileHover={{ borderColor: 'rgba(133, 220, 140, .38)' }} transition={{ duration: 0.55 }}>
             <div className="input-panel-top"><div><span className="step-label">01 <i /> BUILDING PROFILE</span><h3>Tell us what you’re building</h3></div><span className="private-note"><ShieldCheck size={14} /> Not stored · used for this analysis only</span></div>
@@ -257,8 +242,8 @@ export default function App() {
         )}
 
         <section className="method-section" id="how-it-works">
-          <div className="method-title"><span className="section-kicker">FROM DATA TO DESIGN</span><h2>A twin that starts<br />with <em>the real world.</em></h2></div>
-          <div className="method-steps"><article><span>01</span><h3>Ground the location</h3><p>Keyless Open-Meteo conditions and a precise site pin set the local context.</p></article><article><span>02</span><h3>Read the planet</h3><p>NASA POWER monthly observations add solar, rainfall, and temperature signals.</p></article><article><span>03</span><h3>Model better choices</h3><p>AI translates building inputs into a score, risk outlook, and prioritized fixes.</p></article></div>
+          <div className="method-title"><span className="section-kicker">FROM DATA TO DESIGN</span><h2>Local insight.<br /><em>Better buildings.</em></h2></div>
+          <div className="method-steps"><article><span>01</span><h3>Set the place</h3><p>Local weather and a site pin ground your results.</p></article><article><span>02</span><h3>Read the climate</h3><p>NASA data adds solar, rainfall, and temperature context.</p></article><article><span>03</span><h3>Find your next move</h3><p>Get a resilience score, risks, and practical fixes.</p></article></div>
         </section>
       </main>
 
